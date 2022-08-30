@@ -2,7 +2,7 @@ import './App.css'
 import { Routes , Route } from 'react-router-dom'
 import Home from './components/Home'
 import Pokedex from './components/Pokedex'
-import ProtectedRoutes from './components/protectedRoutes'
+import ProtectedRoutes from './components/ProtectedRoutes'
 import { useState } from 'react'
 import PokemonDetails from './components/PokemonDetails'
 

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke}) => {
 
-  const [choice, setChoice] = useState('No selection made')
+  const [choice, setChoice] = useState('All')
 
   const [loading, setLoading] = useState(false)
 
@@ -55,7 +55,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   const handleReset = e => {
     altPoke(false)
     setIndivPoke('')
-    setChoice('No selection made')
+    setChoice('All')
     reloadPokedex()
   }
   
@@ -82,7 +82,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
       <label htmlFor='selectorA' className='typeSelectorLabel'>Select by Type</label>
 
     
-      <select onChange={handleChange2} id='selectorA' value={choice}>
+      <select onChange={handleChange2} id='selectorA' value={choice} defaultValue='All'>
           {pokeProps2?.map (
             pokeProp => <option>{pokeProp.name}</option>
           )}
