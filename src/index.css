@@ -1,0 +1,365 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}
+
+/* COLORS */
+
+:root {
+
+  --pkcolor-Acero: #CCCCCC ;
+  --pkcolor-Agua : #B0E2FF ;
+  --pkcolor-Bicho : #99CC33 ;
+  --pkcolor-Dragon : #AB82FF ;
+  --pkcolor-Electrico : #FFD700 ;
+  --pkcolor-Fantasma : #778899 ;
+  --pkcolor-Fuego : #FF7F00 ;
+  --pkcolor-Hada : #FFB0FF ;
+  --pkcolor-Hielo : #ADD8E6 ;
+  --pkcolor-Lucha : #FF6A6A ;
+  --pkcolor-Normal : #DDCCAA ;
+  --pkcolor-Planta : #99FF66 ;
+  --pkcolor-Psiquico : #FFB5C5 ;
+  --pkcolor-Roca : #CD853F ;
+  --pkcolor-Siniestro : #A9A9A9 ;
+  --pkcolor-Tierra : #DEB887 ;
+  --pkcolor-Veneno : #CC88BB ;
+  --pkcolor-Volador : #BAAAFF ;
+   
+}
+
+.bcolor-steel {
+  background: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+}
+.bcolor-water {
+  background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+}
+.bcolor-bug {
+  background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%) ;
+}
+.bcolor-dragon {
+  background-color: var(--pkcolor-Dragon);
+}
+.bcolor-electric {
+  background-color: var(--pkcolor-Electrico) ;
+}
+.bcolor-ghost {
+  background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%) ;
+}
+.bcolor-fire {
+  background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%) ;
+}
+.bcolor-fairy {
+  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%) ;
+}
+.bcolor-ice {
+  background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%) ;
+}
+.bcolor-fighting {
+  background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%) ;
+}
+.bcolor-normal {
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%) ;
+}
+.bcolor-grass {
+  background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%) ;
+}
+.bcolor-psychic {
+  background-color: var(--pkcolor-Psiquico) ;
+}
+.bcolor-rock {
+  background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%) ;
+}
+.bcolor-dark {
+  background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%) ;
+}
+.bcolor-ground {
+  background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%) ;
+}
+.bcolor-poison {
+  background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%) ;
+}
+.bcolor-flying {
+  background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%) ;
+}
+
+/* SHADOWS */
+
+.shad-steel {
+  box-shadow: inset 7px 7px var(--pkcolor-Acero);
+}
+.shad-water {
+  box-shadow: inset 7px 7px var(--pkcolor-Agua);
+}
+.shad-bug {
+  box-shadow: inset 7px 7px var(--pkcolor-Bicho);
+}
+.shad-dragon {
+  box-shadow: inset 7px 7px var(--pkcolor-Dragon);
+}
+.shad-electric {
+  box-shadow: inset 7px 7px var(--pkcolor-Electrico);
+}
+.shad-ghost {
+  box-shadow: inset 7px 7px var(--pkcolor-Fantasma);
+}
+.shad-fire {
+  box-shadow: inset 7px 7px var(--pkcolor-Fuego);
+}
+.shad-fairy {
+  box-shadow: inset 7px 7px var(--pkcolor-Hada);
+}
+.shad-ice {
+  box-shadow: inset 7px 7px var(--pkcolor-Hielo);
+}
+.shad-fighting {
+  box-shadow: inset 7px 7px var(--pkcolor-Lucha);
+}
+.shad-normal {
+  box-shadow: inset 7px 7px var(--pkcolor-Normal);
+}
+.shad-grass {
+  box-shadow: inset 7px 7px var(--pkcolor-Planta);
+}
+.shad-psychic {
+  box-shadow: inset 7px 7px var(--pkcolor-Psiquico);
+}
+.shad-rock {
+  box-shadow: inset 7px 7px var(--pkcolor-Roca);
+}
+.shad-dark {
+  box-shadow: inset 7px 7px var(--pkcolor-Siniestro);
+}
+.shad-ground {
+  box-shadow: inset 7px 7px var(--pkcolor-Tierra);
+}
+.shad-poison {
+  box-shadow: inset 7px 7px var(--pkcolor-Veneno);
+}
+.shad-flying {
+  box-shadow: inset 7px 7px var(--pkcolor-Volador);
+}
+
+
+/* CLASSES */
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.homeContainer {
+  background-image: url('https://cdn.99images.com/photos/wallpapers/3d-abstract/cute-minimalist%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-achip.jpg');
+  background-size: cover;
+  background-position: left;
+  height: 75vh ;
+  width: 75vw;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeGreeting {
+  height: 70%;
+  width: 50%;
+  /* border: 1px white solid; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.trainerImg {
+  height: 40vh;
+  /* position: absolute; */
+  right: 0;
+}
+
+.pokeDexCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  height: fit-content;
+  justify-content: center;
+  gap: 2vw
+}
+
+.pokeDexCont2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw
+}
+
+.pokeCard {
+  min-height: 420px;
+  width: 300px;
+  border: 1px white solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7%;
+  padding: 1%;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pokeCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardBody {
+  background-color: #363636;
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  padding: 2%;
+  border: 2px inset gray;
+  opacity: 80%;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.typeStyle {
+
+  height: 100%;
+  width: 30%;
+  text-align: center;
+  border-radius: 30%;
+  color: #242424;
+}
+
+.pokeName {
+  color: black;
+  position: absolute;
+  opacity: 60%;
+  top: 40%;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 5px 0px 5px 2px whitesmoke;
+}
+
+.spriteCard {
+  width: 60%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.pokeStats {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
+  justify-items: right;
+}
+
+.pokeStat {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: small;
+}
+
+.statName {
+  justify-self: left;
+}
+
+.selectorContainer {
+  height: 5vh;
+  width: 100%;
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.typeSelectorLabel {
+  align-self: center;
+}
+
+.resetSelector {
+  height: 100%;
+  width: fit-content;
+}
+
+.formContainer {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.pokemonNameInput {
+  height: 100%;
+  width: 15vw;
+}
+
+.searchByNameButton {
+  height: 100%;
+  width: fit-content;
+}
+
+/* IDENTIFIERS */
+
+#selectorA {
+  height: 100%;
+  width: 15vw;
+}
