@@ -32,6 +32,9 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   )
 
   const handleChange2 = e => {
+
+    if (e.target.value != 'All') {
+
     e.preventDefault()
     
     changePage(1)
@@ -50,6 +53,13 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
       
     })
     .catch (err => console.log(err))
+  } else if ( e.target.value == 'All' ) {
+    altPoke(false)
+    setIndivPoke('')
+    setChoice('All')
+    reloadPokedex()
+  }
+
   }
 
   const handleReset = e => {
@@ -83,6 +93,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
 
     
       <select onChange={handleChange2} id='selectorA' value={choice} defaultValue='All'>
+          <option id='unseen'>All</option>
           {pokeProps2?.map (
             pokeProp => <option>{pokeProp.name}</option>
           )}

@@ -257,13 +257,15 @@ hr {
 
 .cardBody {
   background-color: #363636;
-  height: 100%;
-  width: 100%;
+  height: 48%;
+  width: 95%;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
   padding: 2%;
   border: 2px inset gray;
   opacity: 80%;
+  position: absolute;
+  top: 49%
 }
 
 .cardInfo {
@@ -357,9 +359,84 @@ hr {
   width: fit-content;
 }
 
+.indivPokemonArticle {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pokeDetailedImg {
+  height: 30vh;
+  z-index: 2;
+  position: absolute;
+  top: 15%;
+}
+
+.detailsContainer {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: fit-content;
+  /* background-color: whitesmoke; */
+  justify-content: center;
+  align-items: center;
+  background-color: #454AA8;
+  z-index: 1;
+}
+
+.colorCont {
+  width: 100%;
+  height: 20vh;
+}
+
+.detailsName {
+  display: flex;
+  flex-direction: column;
+  color: #030706;
+  font-weight: bold;
+  font-size: 2rem;
+  gap: 3vh;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.generalDetails {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  gap: 10vw;
+}
+
+.generalStats {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #030706;
+}
+
+.generalStats .values{
+  font-size: 1.25rem;
+}
+
 /* IDENTIFIERS */
 
 #selectorA {
   height: 100%;
   width: 15vw;
+}
+
+#unseen {
+  display: none;
 }

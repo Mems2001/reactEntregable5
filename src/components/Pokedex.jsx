@@ -51,10 +51,6 @@ const Pokedex = () => {
     setCurrentPage (number)
   }
 
-  // const altPoke = () => {
-  //   setPkemon2 (true)
-  // }
-
   console.log(currentPage)
 
   if (loading) {

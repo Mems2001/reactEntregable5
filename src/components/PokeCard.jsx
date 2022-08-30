@@ -80,8 +80,8 @@ const PokeCard = ({pkemon , pkemon2, indivPoke}) => {
     <article className={`pokeCard bcolor-${pkeInfo?.types[0].type.name} shad-${shadow()}`}
     onClick={handleClick} >
         <div className='pokeName'><b>{indivPoke? `${pkeInfo?.name}` : pkemon2? `${pkemon.pokemon.name}` : `${pkemon.name}`}</b></div>
-        <img className='spriteCard' src={`${pkeInfo?.sprites.other['official-artwork'].front_default}`} />
-        <hr />
+        <img className='spriteCard' src={`${pkeInfo?.sprites.other['official-artwork'].front_default}`} alt='No image available' />
+        
         <div className='cardBody' >
             <div className='cardInfo'><span>Abilities: </span>{pkeInfo?.abilities.map (
                 ab => <span>{ab.ability.name} </span>
