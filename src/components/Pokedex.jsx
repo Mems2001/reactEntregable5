@@ -14,7 +14,7 @@ const Pokedex = ({trainer}) => {
  const [poke, setPoke] = useState([])
  const [loading, setLoading] = useState(false)
  const [currentPage, setCurrentPage] = useState(1)
- const [pokePerPage, setPokePerPage] = useState(40)
+ const [pokePerPage, setPokePerPage] = useState(4)
  const [pkemon2, setPkemon2] = useState(false)
 
  const reloadPokedex = () => {
@@ -83,7 +83,8 @@ const Pokedex = ({trainer}) => {
         altPoke={setPkemon2} 
         reloadPokedex={reloadPokedex} 
         changePage={changePage} 
-        setIndivPoke={setIndivPoke}/>
+        setIndivPoke={setIndivPoke}
+        setPokePerPage={setPokePerPage}/>
       </div>
 
       <div className='pokeDexCont' >

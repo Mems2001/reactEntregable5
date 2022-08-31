@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke}) => {
+const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke, setPokePerPage}) => {
 
   const [choice, setChoice] = useState('All')
 
@@ -11,6 +11,12 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   const [pokeProps, setPokeProps] = useState('type')
 
   const [pokeProps2, setPokeProps2] = useState()
+
+  const pkePerPage = [
+    4 , 8 , 12 , 16 , 20
+  ]
+
+  
 
   const URL = `https://pokeapi.co/api/v2/${pokeProps}`
 
@@ -30,6 +36,10 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
       
     }, [URL]
   )
+
+  const handleChange = e => {
+    setPokePerPage(e.target.value)
+  }
 
   const handleChange2 = e => {
 
@@ -67,6 +77,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
     setIndivPoke('')
     setChoice('All')
     reloadPokedex()
+    setPokePerPage(4)
   }
   
   const handleSubmit = e => {
@@ -85,6 +96,8 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   return (
     <div className='selectorContainer'>
 
+<button onClick={handleReset} className='resetSelector' >Reset</button>
+
       <form className='formContainer' onSubmit={handleSubmit}>
         <input type='text' placeholder='Write pokémon name' id='pokemonNameInput' className='pokemonNameInput'/>
         <button className='searchByNameButton'>Search</button>
@@ -93,14 +106,21 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
       <label htmlFor='selectorA' className='typeSelectorLabel'>Select by Type</label>
 
     
-      <select onChange={handleChange2} id='selectorA' value={choice}>
+      <select className='selectors' onChange={handleChange2} id='selectorA' value={choice}>
           <option id='unseen'>All</option>
           {pokeProps2?.map (
             pokeProp => <option>{pokeProp.name}</option>
           )}
           </select>
-        
-      <button onClick={handleReset} className='resetSelector' >Reset</button>
+
+      
+        <label htmlFor='pokePerPageS' className='typeSelectorLabel' >Pokemon per page</label>
+        <select className='selectors' onChange={handleChange} id='pokePerPageS'>
+            {pkePerPage.map (
+              each => <option value={each}>{each}</option> 
+            )}
+        </select>
+      
     
     </div>
   )

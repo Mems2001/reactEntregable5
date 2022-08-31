@@ -436,10 +436,14 @@ hr {
   width: fit-content;
 }
 
+.selectors {
+  height: 100%;
+  
+}
+
 /* IDENTIFIERS */
 
 #selectorA {
-  height: 100%;
   width: 15vw;
 }
 
