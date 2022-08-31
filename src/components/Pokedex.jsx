@@ -1,10 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Pagination from './Pagination'
 import PokeCard from './PokeCard'
 import Selector from './Selector.jsx'
 
 const Pokedex = ({trainer}) => {
+
+ const navigate = useNavigate()
 
  const [indivPoke, setIndivPoke] = useState() 
 
@@ -51,7 +54,10 @@ const Pokedex = ({trainer}) => {
     setCurrentPage (number)
   }
 
-  console.log(currentPage)
+  // console.log(currentPage)
+  const handleHome = () => {
+    navigate('/')
+  }
 
   if (loading) {
     return <h2>Loading...</h2>
@@ -62,6 +68,8 @@ const Pokedex = ({trainer}) => {
 
       <header className='pokeHeader'>
         <span className='headerMessage'>Welcome {trainer}, let's catch em' All!</span>
+        <button className='homeBtn' onClick={handleHome}>Back to Home</button>
+        <img className='headerLogo' src='/img/logo.png' />
         <div className='headerDesign'>
           <div className='h1'></div>
           <div className='h2'></div>

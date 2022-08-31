@@ -26,7 +26,7 @@ function App() {
 
         <Route element={<ProtectedRoutes trainer={trainer} />}>
           <Route path='/pokedex' element={<Pokedex trainer={trainer} />} />
-          <Route path='/pokedex/:name' element={ <PokemonDetails /> } />
+          <Route path='/pokedex/:name' element={ <PokemonDetails trainer={trainer}/> } />
         </Route>
 
       </Routes>

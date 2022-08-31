@@ -72,6 +72,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   const handleSubmit = e => {
     e.preventDefault()
     setIndivPoke(e.target.pokemonNameInput.value.trim().toLowerCase())
+    setChoice('All')
   }
 
   // console.log(pokeProps)

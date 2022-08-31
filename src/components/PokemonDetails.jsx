@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 
-const PokemonDetails = () => {
+const PokemonDetails = ({trainer}) => {
+
+  const navigate = useNavigate()
 
   const [pokeDetailed, setPokeDetailed] = useState()
 
@@ -20,9 +22,25 @@ const PokemonDetails = () => {
     } , []
   )
 
+const handleClose = () => {
+  navigate(-1)
+}
+
   return (
   
     <article className='indivPokemonArticle'>
+
+<header className='pokeHeader'>
+        <span className='headerMessage'>Welcome {trainer}, let's catch em' All!</span>
+        <button className='homeBtn' onClick={handleClose}>Back to Pokedex</button>
+        <img className='headerLogo' src='/img/logo.png' />
+        <div className='headerDesign'>
+          <div className='h1'></div>
+          <div className='h2'></div>
+          <div className='h3'></div>
+          <img className='headerImg' src='./img/pokeball.png' />
+        </div>
+      </header>
       
       <img className='pokeDetailedImg' src={pokeDetailed?.sprites.other['official-artwork'].front_default} />
 
