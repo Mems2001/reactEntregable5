@@ -232,13 +232,17 @@ hr {
   background-image: url('https://cdn.99images.com/photos/wallpapers/3d-abstract/cute-minimalist%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-achip.jpg');
   background-size: cover;
   background-position: left;
-  height: 75vh ;
-  width: 75vw;
+  height: 76vh ;
+  width: 76vw;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+  margin-left: 12vw;
+  margin-right: 12vh;
 }
 
 .homeBtn {
@@ -442,4 +446,12 @@ hr {
 
 #unseen {
   display: none;
+}
+
+#name {
+  height: 5vh;
+}
+
+#inputNameBtn {
+  height: 5vh;
 }

@@ -22,7 +22,7 @@ const Pagination = ( {pokePerPage , poke , changePage, currentPage} ) => {
       a , b , currentPage , c , d
     ]
 
-    console.log (pagesShowed)
+    // console.log (pagesShowed)
 
   return (
     <nav className='pagination'>

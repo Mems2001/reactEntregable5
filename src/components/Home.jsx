@@ -44,7 +44,7 @@ const Home = ( {setName} ) => {
             <label htmlFor='name'><b>Give me your name to start!</b></label>
             <div>
                 <input type='text' id='name' {...register('trainerName')} />
-                <button>Ok</button>
+                <button id='inputNameBtn'>Ok</button>
             </div>
         </form>
     </div>

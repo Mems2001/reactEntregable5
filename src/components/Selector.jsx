@@ -21,7 +21,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
 
         axios.get(URL)
       .then (res => {
-        console.log(res.data.results)
+        // console.log(res.data.results)
         setPokeProps2(res.data.results) })
       .catch (err => console.log(err))
 
@@ -40,7 +40,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
     changePage(1)
     setIndivPoke('')
     setChoice(e.target.value)
-    console.log(e.target.value)
+    // console.log(e.target.value)
     const URL = `https://pokeapi.co/api/v2/${pokeProps}/${e.target.value}/`
 
     // console.log(URL)
@@ -76,7 +76,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
   }
 
   // console.log(pokeProps)
-  console.log(pokeProps2)
+  // console.log(pokeProps2)
 
   if (loading) {
     return <h2>Loading...</h2>
