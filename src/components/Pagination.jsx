@@ -1,6 +1,10 @@
-import React from 'react'
+import '../Pagination.css'
+import React, { useEffect, useState } from 'react'
+import { current } from '@reduxjs/toolkit'
 
-const Pagination = ( {pokePerPage , poke , changePage} ) => {
+const Pagination = ( {pokePerPage , poke , changePage, currentPage} ) => {
+
+    const [showPage, setShowPage] = useState(false)
 
     const pageNumbers = []
 
@@ -8,12 +12,28 @@ const Pagination = ( {pokePerPage , poke , changePage} ) => {
         pageNumbers.push(i)
     }
 
+    const a= currentPage - 1
+    const b = currentPage- 2
+    const c = currentPage + 1
+    const d = currentPage + 2
+     
+
+    const pagesShowed = [
+      a , b , currentPage , c , d
+    ]
+
+    console.log (pagesShowed)
+
   return (
-    <div>
+    <nav className='pagination'>
+      <a className='currentPage showed pageBtn' onClick={() => changePage(1)} >First</a>
+      <a className={`pageBtn ${currentPage > 3 ? 'showed' : 'nShowed'}`} >...</a>
         {pageNumbers.map(
-            number => <a  onClick={() => changePage(number)} key={number} >{number}</a>
+            number => <a className={`pageBtn ${pagesShowed.includes(number) ? 'showed' : 'nShowed' } ${currentPage == number ? 'currentPage' : ''}`} onClick={() => changePage(number)} key={number} >{number}</a>
         )}
-    </div>
+        <a className={`pageBtn ${currentPage < pageNumbers.length ? 'showed' : 'nShowed'}`} >...</a>
+        <a className='currentPage showed pageBtn' onClick={() => changePage(pageNumbers.length)} >Last</a>
+    </nav>
   )
 }
 

@@ -83,14 +83,12 @@ const PokeCard = ({pkemon , pkemon2, indivPoke}) => {
         <img className='spriteCard' src={`${pkeInfo?.sprites.other['official-artwork'].front_default}`} alt='No image available' />
         
         <div className='cardBody' >
-            <div className='cardInfo'><span>Abilities: </span>{pkeInfo?.abilities.map (
-                ab => <span>{ab.ability.name} </span>
-            )}</div>
+            
             <div className='cardInfo'><span>Types: </span>{pkeInfo?.types.map(
                 t => <span className={`typeStyle bcolor-${t.type.name}`}>{t.type.name} </span>
             )}
             </div>
-            <div className='cardInfo'><span>Weight: </span><span>{pkeInfo?.weight}</span></div>
+            
             <div>Stats:
                 <div className='pokeStats'>
                     {pkeInfo?.stats.map(

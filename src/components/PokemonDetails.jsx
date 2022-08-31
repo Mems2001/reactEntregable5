@@ -46,6 +46,54 @@ const PokemonDetails = () => {
           </span>
         </div>
 
+        <div className='boxedDetails'>
+            <div className='boxed2' >
+              <h4>Type: </h4>
+              <div className='theBox'>
+                {pokeDetailed?.types.map(
+                  type => <div className={`typeStyle bcolor-${type.type.name}`}>{type.type.name}</div>
+                )}
+              </div>
+              </div>
+            <div className='boxed2' >
+              <h4>Abilities: </h4>
+              <div className='theBox'>
+                  {pokeDetailed?.abilities.map(
+                    ab => <div>{ab.ability.name}</div>
+                  )
+                  }
+              </div>
+            </div>
+        </div>
+
+        <div className='statsContainer'>
+          <h2>Stats</h2>
+          <div className='stats'>
+                  {pokeDetailed?.stats.map(
+                    st => <div className='stat'>
+                      <span>{st.stat.name}:</span>
+                      <span>{st.base_stat}/150</span>
+                      <div className='barraStat1'>
+                        <div className={`barraStat2 bcolor-${pokeDetailed?.types[0].type.name}`} style={{width: `${st.base_stat}%`}}></div>
+                      </div>
+                    </div>
+                  )
+
+                  }
+          </div>
+        </div>
+
+        <div className='movementsContainer'>
+          <h2>Movements</h2>
+          <div className='moves'>
+            {
+              pokeDetailed?.moves.map(
+                move => <span className='move'>{move.move.name}</span>
+              )
+            }
+          </div>
+        </div>
+
       </div>
     
     </article>

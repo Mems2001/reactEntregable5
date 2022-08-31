@@ -1,0 +1,171 @@
+.indivPokemonArticle {
+    min-height: 280vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    position: relative;
+  }
+  
+  .pokeDetailedImg {
+    height: 35vh;
+    z-index: 2;
+    position: absolute;
+    top: 13vh;
+  }
+  
+  .detailsContainer {
+    position: absolute;
+    top: 32vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 762px;
+    height: fit-content;
+    
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 1;
+    margin-bottom: 10vh;
+  }
+  
+  .colorCont {
+    width: 100%;
+    height: 20vh;
+  }
+  
+  .detailsName {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    gap: 3vh;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    background-color: rgb(73, 73, 73);
+  }
+  
+  .generalDetails {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    gap: 10vw;
+    background-color: rgb(73, 73, 73);
+  }
+  
+  .generalStats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.75rem;
+    
+  }
+  
+  .generalStats .values{
+    font-size: 1.25rem;
+  }
+
+  .boxedDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: rgb(73, 73, 73);
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .boxed2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4vh;
+  }
+
+  .theBox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10%
+  }
+
+  .statsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw ;
+    padding-right: 5vw ;
+    padding-bottom: 10vh;
+    background-color: rgb(73, 73, 73);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+    grid-template-rows: repeat(3 , auto);
+    width: 100%;
+    height: fit-content;
+    gap: 3vw;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .barraStat1 {
+    width: 80%;
+    background-color: white;
+    height: 60%;
+  }
+
+  .barraStat2 {
+    height: 100%;
+  }
+
+  .movementsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    height: fit-content;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    background-color: rgb(73, 73, 73);
+  }
+
+  .moves {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content:center;
+  }
+
+  .move {
+    background-color: gray;
+    height: 25px;
+    width: fit-content;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+  }

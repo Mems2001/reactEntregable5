@@ -4,7 +4,7 @@ import Pagination from './Pagination'
 import PokeCard from './PokeCard'
 import Selector from './Selector.jsx'
 
-const Pokedex = () => {
+const Pokedex = ({trainer}) => {
 
  const [indivPoke, setIndivPoke] = useState() 
 
@@ -60,6 +60,16 @@ const Pokedex = () => {
   return (
     <div className='pokeDexCont2'>
 
+      <header className='pokeHeader'>
+        <span className='headerMessage'>Welcome {trainer}, let's catch em' All!</span>
+        <div className='headerDesign'>
+          <div className='h1'></div>
+          <div className='h2'></div>
+          <div className='h3'></div>
+          <img className='headerImg' src='./img/pokeball.png' />
+        </div>
+      </header>
+
       <div>
         <Selector setPoke={setPoke} 
         altPoke={setPkemon2} 
@@ -76,7 +86,8 @@ const Pokedex = () => {
 
       {indivPoke? '' : <Pagination pokePerPage={pokePerPage} 
       poke={poke} 
-      changePage={changePage} />
+      changePage={changePage} 
+      currentPage={currentPage} />
     }
 
     </div>

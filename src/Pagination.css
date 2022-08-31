@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
+.pageBtn {
+    cursor: pointer;
+    height: 6vh;
+    width: 6vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.showed {
+    display: flex;
+}
+
+.nShowed {
+    display: none;
+}
+
+.currentPage {
+    background-color: #DD1A1A;
+    border-radius: 25%;
+    cursor: pointer;
+}

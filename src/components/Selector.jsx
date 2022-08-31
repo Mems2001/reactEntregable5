@@ -92,7 +92,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
       <label htmlFor='selectorA' className='typeSelectorLabel'>Select by Type</label>
 
     
-      <select onChange={handleChange2} id='selectorA' value={choice} defaultValue='All'>
+      <select onChange={handleChange2} id='selectorA' value={choice}>
           <option id='unseen'>All</option>
           {pokeProps2?.map (
             pokeProp => <option>{pokeProp.name}</option>
