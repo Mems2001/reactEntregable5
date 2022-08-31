@@ -114,7 +114,7 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
           </select>
 
       
-        <label htmlFor='pokePerPageS' className='typeSelectorLabel' >Pokemon per page</label>
+        <label htmlFor='pokePerPageS' className='typeSelectorLabel' >Pokémon per page</label>
         <select className='selectors' onChange={handleChange} id='pokePerPageS'>
             {pkePerPage.map (
               each => <option value={each}>{each}</option> 
