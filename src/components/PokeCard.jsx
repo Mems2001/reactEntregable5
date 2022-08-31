@@ -38,13 +38,17 @@ const PokeCard = ({pkemon , pkemon2, indivPoke}) => {
 
             } else {
 
-            
+            setLoading(true)
             const URL = `${pkemon?.url}`
+            
 
             // console.log(URL)
 
             axios.get(URL)
-            .then(res => setPkeInfo(res.data))
+            .then(res => {
+                setPkeInfo(res.data)
+                setLoading(false)
+                })
             .catch(err => console.log(err))
         }
 
@@ -73,7 +77,7 @@ const PokeCard = ({pkemon , pkemon2, indivPoke}) => {
     }
 
     if (loading) {
-        return <h2>Loading...</h2>
+        return <div className='cardLoading'>Loading...</div>
     } else {
 
   return (

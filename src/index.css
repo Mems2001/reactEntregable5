@@ -290,6 +290,16 @@ hr {
   cursor: pointer;
 }
 
+.cardLoading {
+  min-height: 375px;
+  width: 300px;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7%;
+}
+
 .pokeCard:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;

@@ -28,14 +28,14 @@ const PokemonDetails = () => {
 
       <div className='detailsContainer'>
 
-        <div className={`colorCont bcolor-${pokeDetailed?.types[0].type.name}`}></div>
+        <div className={`colorCont bcolor-${pokeDetailed?.types[0].type.name} boxShadow`}></div>
 
-        <div className='detailsName'>
+        <div className='detailsName boxShadow'>
           <span>#{pokeDetailed?.id}</span>
           <span>{name}</span>
         </div>
 
-        <div className='generalDetails' >
+        <div className='generalDetails boxShadow' >
           <span className='generalStats'> Weight:
             <span className='values'>{pokeDetailed?.weight}
             </span>
@@ -46,7 +46,7 @@ const PokemonDetails = () => {
           </span>
         </div>
 
-        <div className='boxedDetails'>
+        <div className='boxedDetails boxShadow'>
             <div className='boxed2' >
               <h4>Type: </h4>
               <div className='theBox'>
@@ -66,7 +66,7 @@ const PokemonDetails = () => {
             </div>
         </div>
 
-        <div className='statsContainer'>
+        <div className='statsContainer boxShadow'>
           <h2>Stats</h2>
           <div className='stats'>
                   {pokeDetailed?.stats.map(
@@ -74,7 +74,7 @@ const PokemonDetails = () => {
                       <span>{st.stat.name}:</span>
                       <span>{st.base_stat}/150</span>
                       <div className='barraStat1'>
-                        <div className={`barraStat2 bcolor-${pokeDetailed?.types[0].type.name}`} style={{width: `${st.base_stat}%`}}></div>
+                        <div className={`barraStat2 bcolor-${pokeDetailed?.types[0].type.name}`} style={{width: `${st.base_stat * (100/150)}%`}}></div>
                       </div>
                     </div>
                   )
@@ -83,7 +83,7 @@ const PokemonDetails = () => {
           </div>
         </div>
 
-        <div className='movementsContainer'>
+        <div className='movementsContainer boxShadow'>
           <h2>Movements</h2>
           <div className='moves'>
             {
