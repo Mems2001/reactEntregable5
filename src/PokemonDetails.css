@@ -9,7 +9,7 @@
   }
   
   .pokeDetailedImg {
-    height: 30vh;
+    height: 40vh;
     z-index: 2;
     position: absolute;
     top: 12vh;
@@ -180,6 +180,13 @@
 
       width: 90vw;
       top: 25vh;
+    }
+
+    .pokeDetailedImg {
+      height: 20vh;
+      z-index: 2;
+      position: absolute;
+      top: 12vh;
     }
 
     .colorCont {
