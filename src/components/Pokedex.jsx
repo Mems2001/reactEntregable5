@@ -78,14 +78,14 @@ const Pokedex = ({trainer}) => {
         </div>
       </header>
 
-      <div>
+      
         <Selector setPoke={setPoke} 
         altPoke={setPkemon2} 
         reloadPokedex={reloadPokedex} 
         changePage={changePage} 
         setIndivPoke={setIndivPoke}
         setPokePerPage={setPokePerPage}/>
-      </div>
+      
 
       <div className='pokeDexCont' >
       { indivPoke? <PokeCard key={`https://pokeapi.co/api/v2/pokemon/${indivPoke}`} indivPoke={indivPoke} /> : currentPoke?.map ( pkemon => 

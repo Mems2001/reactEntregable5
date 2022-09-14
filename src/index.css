@@ -181,6 +181,8 @@ hr {
   justify-content: center;
 }
 
+/* HEADER */
+
 .pokeHeader {
   height: 12vh;
   position: relative;
@@ -400,6 +402,8 @@ hr {
   justify-self: left;
 }
 
+/* SELECTOR */
+
 .selectorContainer {
   height: 5vh;
   width: 100%;
@@ -457,4 +461,81 @@ hr {
 
 #inputNameBtn {
   height: 5vh;
+}
+
+@media screen and (max-width:767px) {
+  
+  .pokeHeader {
+    height: 10vh;
+    position: relative;
+    width: 98vw;
+  }
+  
+  .headerMessage{
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .headerDesign {
+    height: 100%;
+  }
+
+  .headerImg {
+    position: absolute;
+    height: 5vh;
+    right: 10%;
+    top: 5% ;
+    transform: rotatez(15deg);
+  }
+  
+  .headerLogo {
+    position: absolute;
+    width: 20vw;
+    top: 40%;
+    left: 10vw;
+  }
+
+  /* SELECTOR */
+
+  .selectorContainer {
+    height: 4vh;
+    width: 100%;
+    margin-left: 5vw;
+    /* margin-right: 3vw; */
+    margin-top: 0vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5vw;
+  }
+
+  .resetSelector {
+    width: 15vw;
+  }
+
+  .formContainer {
+    gap: 5vw;
+  }
+
+  .pokemonNameInput {
+    width: 40vw;
+  }
+
+  .typeContainer {
+    height: 100%;
+  }
+
+  .typeSelectorLabel {
+    margin-right: 2vw;
+    font-size: 0.8rem;
+  }
+
+  .perPageContainer {
+    height: 100%;
+  }
+
 }

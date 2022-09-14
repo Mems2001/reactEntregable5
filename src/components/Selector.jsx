@@ -103,23 +103,25 @@ const Selector = ({setPoke , altPoke , reloadPokedex , changePage , setIndivPoke
         <button className='searchByNameButton'>Search</button>
       </form>
 
-      <label htmlFor='selectorA' className='typeSelectorLabel'>Select by Type</label>
+      <div className='typeContainer'>
+        <label htmlFor='selectorA' className='typeSelectorLabel'>Select by Type</label>
 
-    
-      <select className='selectors' onChange={handleChange2} id='selectorA' value={choice}>
+        <select className='selectors' onChange={handleChange2} id='selectorA' value={choice}>
           <option id='unseen'>All</option>
           {pokeProps2?.map (
             pokeProp => <option>{pokeProp.name}</option>
-          )}
-          </select>
+            )}
+        </select>
+      </div>    
 
-      
+      <div className='perPageContainer'>
         <label htmlFor='pokePerPageS' className='typeSelectorLabel' >Pokémon per page</label>
         <select className='selectors' onChange={handleChange} id='pokePerPageS'>
             {pkePerPage.map (
               each => <option value={each}>{each}</option> 
             )}
         </select>
+      </div>
       
     
     </div>
