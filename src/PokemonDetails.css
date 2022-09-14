@@ -201,9 +201,17 @@
       font-size: 1.5rem;
       gap: 2vh;
       text-align: center;
-      padding-top: 4vh;
-      padding-bottom: 4vh;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
       background-color: rgb(73, 73, 73);
+    }
+
+    .generalDetails {
+
+      padding-top: 1vh;
+      padding-bottom: 2vh;
+      gap: 10vw;
+    
     }
 
     .theBox {
@@ -217,6 +225,18 @@
 
     .typeStyle {
       width: 20vw !important;   
+    }
+
+    .boxed2 {
+      padding-bottom: 3vh;
+    }
+
+    .statsContainer {
+      
+      padding-left: 5vw ;
+      padding-right: 5vw ;
+      padding-bottom: 7vh;
+  
     }
 
   }
