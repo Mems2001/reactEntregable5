@@ -9,7 +9,7 @@
   }
   
   .pokeDetailedImg {
-    height: 40vh;
+    height: 30vh;
     z-index: 2;
     position: absolute;
     top: 12vh;
@@ -172,4 +172,44 @@
     padding-left: 2vw;
     padding-right: 2vw;
     text-align: center;
+  }
+
+  @media screen and (max-width:767px) {
+
+    .detailsContainer {
+
+      width: 90vw;
+      top: 25vh;
+    }
+
+    .colorCont {
+      height: 15vh;
+      border-top-left-radius: 5%;
+      border-top-right-radius: 5%;
+    }
+
+    .detailsName {
+
+      font-weight: bold;
+      font-size: 1.5rem;
+      gap: 2vh;
+      text-align: center;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      background-color: rgb(73, 73, 73);
+    }
+
+    .theBox {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 1vh
+    }
+
+    .typeStyle {
+      width: 20vw !important;   
+    }
+
   }
