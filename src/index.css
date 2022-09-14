@@ -582,4 +582,14 @@ hr {
     height: 7vh;
   }
 
+  .typeContainer {
+    display: flex;
+    gap: 1vw ;
+  }
+
+  .perPageContainer {
+    display: flex;
+    gap: 1vw ;
+  }
+
 }
