@@ -510,6 +510,9 @@ hr {
     flex-wrap: wrap;
     gap: 5vw;
     justify-content: center;
+    /* position: sticky;
+    top: 0;
+    z-index: 1; */
   }
 
   .resetSelector {
@@ -535,6 +538,12 @@ hr {
 
   .perPageContainer {
     height: 100%;
+  }
+
+  /* POKEDEX */
+
+  .pokeDexCont {
+    gap: 5vh;
   }
 
 }
