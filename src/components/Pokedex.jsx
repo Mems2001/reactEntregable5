@@ -68,7 +68,7 @@ const Pokedex = ({trainer}) => {
 
       <header className='pokeHeader'>
         <span className='headerMessage'>Welcome {trainer}, let's catch em' All!</span>
-        <button className='homeBtn' onClick={handleHome}>Back to Home</button>
+        <button className='homeBtn' onClick={handleHome}>Back</button>
         <img className='headerLogo' src='/img/logo.png' />
         <div className='headerDesign'>
           <div className='h1'></div>
