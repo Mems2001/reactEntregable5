@@ -410,6 +410,7 @@ hr {
   margin-top: 3vh;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1vw;
 }
 
@@ -544,6 +545,41 @@ hr {
 
   .pokeDexCont {
     gap: 5vh;
+  }
+
+}
+
+@media screen and (max-height:500px) {
+  
+  .pokeHeader {
+    height: 20vh;
+    position: relative;
+    width: 98vw;
+  }
+
+  .headerLogo {
+    position: absolute;
+    width: 20vw;
+    top: 10%;
+    left: 10vw;
+  }
+
+  .headerImg {
+    position: absolute;
+    height: 20vh;
+    right: 5%;
+    top: 15% ;
+    transform: rotatez(15deg);
+  }
+
+  .homeBtn {
+    
+    height: 7vh;
+
+  }
+
+  .selectorContainer {
+    height: 7vh;
   }
 
 }

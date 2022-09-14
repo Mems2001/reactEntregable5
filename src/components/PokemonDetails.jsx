@@ -32,7 +32,7 @@ const handleClose = () => {
 
 <header className='pokeHeader'>
         <span className='headerMessage'>Welcome {trainer}, let's catch em' All!</span>
-        <button className='homeBtn' onClick={handleClose}>Back to Pokedex</button>
+        <button className='homeBtn' onClick={handleClose}>Back</button>
         <img className='headerLogo' src='/img/logo.png' />
         <div className='headerDesign'>
           <div className='h1'></div>
