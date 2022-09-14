@@ -503,14 +503,13 @@ hr {
   .selectorContainer {
     height: 4vh;
     width: 100%;
-    margin-left: 5vw;
-    /* margin-right: 3vw; */
     margin-top: 0vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5vw;
+    justify-content: center;
   }
 
   .resetSelector {
